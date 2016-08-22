@@ -182,6 +182,7 @@ return [
                 ],
                 'itemsProcFunc' => 'In2code\PowermailCond\UserFunc\GetPowermailFields->getFields',
                 'itemsProcFunc_addFieldsets' => true,
+                'fieldTypes' => \In2code\PowermailCond\UserFunc\GetPowermailFields::DEFAULT_FIELD_TYPES,
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => 'required'

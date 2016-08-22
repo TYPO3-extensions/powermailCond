@@ -61,6 +61,7 @@ return [
                 // allow only this types of fields in selector
                 'itemsProcFuncValue' => 'input,textarea,select,radio,check',
                 'size' => 1,
+                'fieldTypes' => \In2code\PowermailCond\UserFunc\GetPowermailFields::DEFAULT_FIELD_TYPES,
                 'maxitems' => 1,
                 'eval' => 'required'
             ]
@@ -185,6 +186,7 @@ return [
                 'itemsProcFunc' => 'In2code\PowermailCond\UserFunc\GetPowermailFields->getFields',
                 // allow only this types of fields in selector
                 'itemsProcFuncValue' => 'input,textarea,select,radio,check',
+                'fieldTypes' => \In2code\PowermailCond\UserFunc\GetPowermailFields::DEFAULT_FIELD_TYPES,
                 'size' => 1,
                 'maxitems' => 1
             ],

@@ -43,6 +43,13 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class GetPowermailFields
 {
+    const DEFAULT_FIELD_TYPES = [
+        'input',
+        'textarea',
+        'select',
+        'radio',
+        'check'
+    ];
 
     /**
      * @var \TYPO3\CMS\Core\Database\DatabaseConnection
@@ -58,17 +65,6 @@ class GetPowermailFields
      * @var int
      */
     protected $formUid = 0;
-
-    /**
-     * @var array
-     */
-    protected $defaultFieldTypes = [
-        'input',
-        'textarea',
-        'select',
-        'radio',
-        'check'
-    ];
 
     /**
      * show all fields in the backend
@@ -280,11 +276,13 @@ class GetPowermailFields
     }
 
     /**
+     * Get default field types from TCA config
+     *
      * @return array
      */
     public function getDefaultFieldTypes()
     {
-        return $this->defaultFieldTypes;
+        return $this->params['config']['fieldTypes'];
     }
 
     /**
